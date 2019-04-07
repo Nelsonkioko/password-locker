@@ -7,7 +7,7 @@ class Credential:
     """
     passwords = []  # array to store passwords
 
-    def __init__(self, site, username, password):
+    def __init__(self, site, username, password, email, number):
         """
         This is a function that will allow us to create new instances of sites
         username and password for different users
@@ -15,6 +15,8 @@ class Credential:
         self.site = site
         self.username = username
         self.password = password
+        self.email = email
+        self.number = number
 
     def create_password(self):
         """
