@@ -1,6 +1,6 @@
 class User:
     """
-    class that will contain all the details of the user
+    class that contains user details only
     """
 
     def __init__(self, login, password):
