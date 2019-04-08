@@ -54,4 +54,27 @@ class Credential:
         for password in cls.passwords:
             if password.site.lower() == site.lower():
                 cls.passwords.remove(password)
-    
+    @classmethod
+    def acc_exist(cls,site):
+        '''
+        Method to check if an account exists
+        '''
+        for account in cls.passwords:
+            if account.site == site:
+                return True
+
+            return False 
+    @classmethod
+    def find_by_number(cls,num):
+        '''
+        Method that takes in a number and returns an account that matches that number.
+
+        Args:
+            number: Phone number to search for
+        Returns :
+            Account that matches the number.
+        '''
+
+        for contact in cls.passwords:
+            if contact.number == num:
+                return contact

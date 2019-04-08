@@ -62,6 +62,18 @@ def delete_password(acc):
     """
     acc.delete_password()
 
+def check_existing_accnt(account):
+    '''
+    this a function that finds user by account and returns boolean
+    '''
+    return Credential.acc_exist(account)
+    
+def find_contact(num):
+    '''
+    Function that finds an account by number and returns the account
+    '''
+    return Credential.find_by_number(num)
+
 
 def main():
     '''
@@ -82,7 +94,7 @@ def main():
     print(f"Welcome {Name}\n")
 
     while True:
-         print("Use these codes : create - creates a password of your choice, gp - generates a new password, dp - display passwords, close -exit the password-locker ") 
+         print("Use these codes : search - search for accounts ++++++++++++++++++++++++++++++++++create - creates a password of your choice, gp - generates a new password, dp - display passwords, close -exit the password-locker ") 
 
          code = input().lower()
 
@@ -102,7 +114,7 @@ def main():
              print ("Please enter your password ....")
              password = input()
 
-             save_password(create_passwords(site, username, password, email, number)) # create and save new contact
+             save_password(create_passwords(site, username, password, email, number)) # create and save new account
              print(f"New password for {site} added!\n")
 
          elif code == 'gp':
@@ -144,6 +156,21 @@ def main():
                     print('\n')
                     print("You dont seem to have any passwords saved yet")
                     print('\n')
+        
+         elif code == 'search':
+
+                            print("Enter the account you want to search for")
+
+                            search_accnt = input()
+                            if check_existing_accnt(search_accnt):
+                                    search_accnt = find_contact(search_accnt)
+                                    print(f"Account:...{search_accnt.site}")
+                                    print(f"Email:... {search_accnt.email}")
+                                    print(f"Phone number:...{search_accnt.number}")
+                                    print(f"Username:...{search_accnt.username}")
+                                    print(f"Password:...{search_accnt.password}\n")
+                            else:
+                                    print("That account does not exist")
          elif code == 'close':
              print ('Adios!')
              break
