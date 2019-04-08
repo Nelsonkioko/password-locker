@@ -31,13 +31,6 @@ def save_password(cridential):
     '''
     cridential.create_password ()
 
-
-def generate_password(length):
-    """
-    Generates a random password for the user
-    """
-    return length.generate_password() 
-
 def generate_Password(number):
    generated_pwd = ''
 
@@ -56,17 +49,17 @@ def display_passwords():
     return Credential.display_passwords()
 
 
-def delete_password(acc):
-    """
-    This is a function that will delete the password
-    """
-    acc.delete_password()
+# def delete_password(acc):
+#     """
+#     This is a function that will delete the password
+#     """
+#     acc.delete_password()
 
-def check_existing_accnt(account):
+def check_existing_accnt(accounts):
     '''
     this a function that finds user by account and returns boolean
     '''
-    return Credential.acc_exist(account)
+    return Credential.acc_exist(accountss)
     
 def find_contact(num):
     '''
@@ -94,8 +87,12 @@ def main():
     print(f"Welcome {Name}\n")
 
     while True:
-         print("Use these codes : search - search for accounts ++++++++++++++++++++++++++++++++++create - creates a password of your choice, gp - generates a new password, dp - display passwords, close -exit the password-locker ") 
-
+         print ("Use these codes to make requests:")
+         print("search - search for accounts")
+         print("create - creates a password of your choice")  
+         print("gp - generates a new password")
+         print("dp - display passwords")
+         print("close -exit the password-locker")
          code = input().lower()
 
          if code == 'create':
@@ -170,9 +167,9 @@ def main():
                                     print(f"Username:...{search_accnt.username}")
                                     print(f"Password:...{search_accnt.password}\n")
                             else:
-                                    print("That account does not exist")
+                                    print("That account does not exist \n")
          elif code == 'close':
-             print ('Adios!')
+             print ('Adios! Adios! Adios!')
              break
          else:
              print ('please use a valid code')

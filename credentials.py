@@ -55,12 +55,12 @@ class Credential:
             if password.site.lower() == site.lower():
                 cls.passwords.remove(password)
     @classmethod
-    def acc_exist(cls,site):
+    def acc_exist(cls,accounts):
         '''
         Method to check if an account exists
         '''
         for account in cls.passwords:
-            if account.site == site:
+            if account.site == accounts:
                 return True
 
             return False 
