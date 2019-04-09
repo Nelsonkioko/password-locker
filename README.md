@@ -12,7 +12,7 @@ This is an app that allows users to store account credentials,  create new accou
 
 ## Technologies Used
 
-Python 3.6
+Python 3.6 
 
 ## Application requirements
 
