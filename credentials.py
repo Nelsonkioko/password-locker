@@ -1,4 +1,4 @@
-from random import randint #this will allow us to use the randint method
+
 
 
 class Credential: 
