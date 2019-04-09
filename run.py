@@ -94,7 +94,7 @@ def main():
          print("dp - display passwords")
          print("close -exit the password-locker")
         #  print("del - delete passwords")
-         code = input().lower()
+         code = input().lower() 
 
          if code == 'create':
              print ("Please enter the social media site name of your account i.e Instagram, twitter etc....")
