@@ -59,13 +59,13 @@ def check_existing_accnt(accounts):
     '''
     this a function that finds user by account and returns boolean
     '''
-    return Credential.acc_exist(accountss)
+    return Credential.acc_exist(accounts)
     
-def find_contact(num):
+def find_accnt(acc):
     '''
-    Function that finds an account by number and returns the account
+    Function that finds an account by social site name and returns the account
     '''
-    return Credential.find_by_number(num)
+    return Credential.find_by_accnt(acc)
 
 
 def main():
@@ -93,6 +93,7 @@ def main():
          print("gp - generates a new password")
          print("dp - display passwords")
          print("close -exit the password-locker")
+         print("del - delete passwords")
          code = input().lower()
 
          if code == 'create':
@@ -156,23 +157,33 @@ def main():
         
          elif code == 'search':
 
-                            print("Enter the account you want to search for")
+                    print("Enter the account you want to search for")
 
-                            search_accnt = input()
-                            if check_existing_accnt(search_accnt):
-                                    search_accnt = find_contact(search_accnt)
-                                    print(f"Account:...{search_accnt.site}")
-                                    print(f"Email:... {search_accnt.email}")
-                                    print(f"Phone number:...{search_accnt.number}")
-                                    print(f"Username:...{search_accnt.username}")
-                                    print(f"Password:...{search_accnt.password}\n")
-                            else:
-                                    print("That account does not exist \n")
-         elif code == 'close':
-             print ('Adios! Adios! Adios!')
-             break
-         else:
-             print ('please use a valid code')
+                    search_accnt = input()
+                    if check_existing_accnt(search_accnt):
+                            search_accnt = find_accnt(search_accnt)
+                            for pwd in display_passwords():
+                                print(f"Account:...{pwd.site}")
+                                print(f"Email:... {pwd.email}")
+                                print(f"Phone number:...{pwd.number}")
+                                print(f"Username:...{pwd.username}")
+                                print(f"Password:...{pwd.password}\n")
+                    else:
+                            print("That account does not exist \n")
+        # elif code == 'del':
+
+            # print("Enter the name of the account you want to delete")
+
+            # number = input()
+
+            # delete_number = find_contact(number)
+
+            # del_contact(delete_number)                       
+                    elif code == 'close':
+                        print ('Adios! Adios! Adios!')
+                        break
+                    else:
+                        print ('please use a valid code')
 
 if __name__ == "__main__":
     main()

@@ -65,7 +65,7 @@ class Credential:
 
             return False 
     @classmethod
-    def find_by_number(cls,num):
+    def find_by_accnt(cls,acc):
         '''
         Method that takes in a number and returns an account that matches that number.
 
@@ -75,6 +75,6 @@ class Credential:
             Account that matches the number.
         '''
 
-        for contact in cls.passwords:
-            if contact.number == num:
-                return contact
+        for sites in cls.passwords:
+            if sites.site == acc:
+                return acc

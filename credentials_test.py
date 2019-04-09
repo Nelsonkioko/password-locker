@@ -10,7 +10,7 @@ class TestCredentials(unittest.TestCase):
         """
         This function will create a new instance of Password before each test
         """
-        self.new_password = Credential("twitter", "kioko", "Giz")
+        self.new_password = Credential("twitter", "kioko", "Giz", "kiokonelson2@gmail.com", "0777770089")
 
     def test_new_password(self):
         """
@@ -19,6 +19,8 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_password.site, "twitter")
         self.assertEqual(self.new_password.username, "kioko")
         self.assertEqual(self.new_password.password, "Giz")
+        self.assertEqual(self.new_password.email, "email")
+        self.assertEqual(self.new_password.number, "number")
 
     def test_save_new_passssword(self): 
         """
