@@ -10,7 +10,7 @@ class TestUser(unittest.TestCase):
         """
         This will create a new user before each test;
         """
-        self.new_user = User("kioko", "Giz")
+        self.new_user = User("kioko", "Giz") 
 
     def test_init(self):
         """
