@@ -4,7 +4,7 @@ This is a Python app that allows you to save passwords to various online account
 
 ## Author name
 
-Nelson kioko
+Nelson kioko 
 
 ## Project Description
 
