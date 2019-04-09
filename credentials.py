@@ -24,17 +24,7 @@ class Credential:
         """
         Credential.passwords.append(self)#goes to the Credential class and adds a new password to the array
         
-    def generate_password(self, length):
-        """
-        Function will generate a random password for the user by choosing random characters
-        until the length passsed in the function is met
-        """
-        chars = ["K", "I", "O", "K", "O", "N", "E", "L", "S", "O", "N", "0","1"]
-        new_password = ""
-        while(len(new_password) < length):
-            char = chars[randint(0, len(chars) - 1)]#randomly choose a character from index 0 to the last index
-            new_password += char
-        return new_password
+   
 
     @classmethod
     def display_passwords(cls):
