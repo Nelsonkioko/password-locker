@@ -96,7 +96,7 @@ def main():
         #  print("del - delete passwords")
          code = input().lower() 
 
-         if code == 'create':
+         if code == 'create': 
              print ("Please enter the social media site name of your account i.e Instagram, twitter etc....")
              site = input()
 
