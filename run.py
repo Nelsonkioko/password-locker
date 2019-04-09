@@ -93,7 +93,7 @@ def main():
          print("gp - generates a new password")
          print("dp - display passwords")
          print("close -exit the password-locker")
-         print("del - delete passwords")
+        #  print("del - delete passwords")
          code = input().lower()
 
          if code == 'create':
