@@ -1,7 +1,7 @@
 from random import randint #this will allow us to use the randint method
 
 
-class Credential:
+class Credential: 
     """
     Class which we will use to create the passwords
     """
