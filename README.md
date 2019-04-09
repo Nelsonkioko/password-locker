@@ -46,8 +46,8 @@ Python 3.6
 * The user is able to store my already existing account credentials in the application. 
 * The user is able to create new account credentials in the application. 
 * The user is able to have the option of putting in a password that he/she wants to use for the new credential account. It can also generate automatically
- * As a user, I also want to view my various account credentials and their passwords in the application.
- * The user is able to delete a credentials account.
+ * The user is able to view various account credentials and their passwords in the application.
+
 
 
 # TDD
