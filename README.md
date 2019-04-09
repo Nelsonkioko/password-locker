@@ -41,7 +41,7 @@ Python 3.6
 `$ ./run.py`
 
 
-## BDD
+# BDD
 # The user is able to create a password locker account with my details, a login username and password.
 # The user is able to store my already existing account credentials in the application. 
 # The user is able to create new account credentials in the application. 
