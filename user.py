@@ -8,7 +8,7 @@ class User:
         This will create unique details for each instance of the User class
         """
         self.login = login
-        self.password = password
+        self.password = password 
         
 
 
