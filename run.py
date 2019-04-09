@@ -179,11 +179,11 @@ def main():
             # delete_number = find_contact(number)
 
             # del_contact(delete_number)                       
-                    elif code == 'close':
-                        print ('Adios! Adios! Adios!')
-                        break
-                    else:
-                        print ('please use a valid code')
+         elif code == 'close':
+             print ('Adios! Adios! Adios!')
+             break
+         else:
+             print ('please use a valid code')
 
 if __name__ == "__main__":
     main()
