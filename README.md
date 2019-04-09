@@ -67,7 +67,7 @@ Python 3.6
 
 ## License
 
-MIT License
+MIT License 
 
 Copyright (c) [2018] [Nelson kioko]
 
